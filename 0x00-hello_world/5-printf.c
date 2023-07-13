@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
-* main function - prints the specified text
+* main - prints the specified text
 * Return: 0 means that it was successful otherwise not successful
 */
 int main(void)
