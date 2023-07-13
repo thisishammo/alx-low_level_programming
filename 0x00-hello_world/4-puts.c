@@ -1,6 +1,8 @@
 #include<stdio.h>
-/*Prints the speciied string
- * */
+/**
+* main - Prints the speciied string
+* Return = 0
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
