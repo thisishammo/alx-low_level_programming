@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
 * main - Prints the speciied string
-* Return = 0
+* Return: 1 (Meaning success) otherwise means error
 */
 int main(void)
 {
