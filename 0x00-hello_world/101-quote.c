@@ -1,6 +1,7 @@
 #include<unistd.h>
 /**
  * main - prints the specified message
+ * Return: 1 indicating error
 */
 int main(void)
 {
