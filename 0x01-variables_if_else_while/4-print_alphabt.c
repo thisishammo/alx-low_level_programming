@@ -9,15 +9,16 @@ int main(void)
 {
 	int i;
 
-	for (i = 65; i <= 90; i++)
+	for (i = 97; i <= 122; i++)
 	{
-		char as = char(i);
+		char as = (char)i;
 
-		if (as == 'q' && as == 'e')
+		if (as != 'q' && as != 'e')
 		{
 			putchar(as);
 		}
 	}
+	putchar(10);
 	return (0);
 }
 

@@ -11,18 +11,15 @@ int main(void)
 
 	for (i = 97; i <= 122; i++)
 	{
-		char as = char(i);
-
-		putchar(as);
+		putchar(i);
 	}
 	int b;
 
 	for (b = 65; b <= 90; b++)
 	{
-		char bs = char(b);
-
-		putchar(bs);
+		putchar(b);
 	}
+	putchar(10);
 	return (0);
 }
 
