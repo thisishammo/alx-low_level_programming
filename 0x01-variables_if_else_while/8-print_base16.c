@@ -9,11 +9,11 @@ int main(void)
 
 	for (i = 48; i <= 102; i++)
 	{
-		if(i < 58)
+		if (i < 58)
 		{
 			putchar(i);
 		}
-		else if(i > 96 && i < 103)
+		else if (i > 96 && i < 103)
 		{
 			putchar(i);
 		}
