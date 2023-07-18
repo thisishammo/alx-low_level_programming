@@ -4,26 +4,30 @@
 * print_alphabets - prints alphabets
 * Return: 0 means successful otherwise error
 */
-void print_alphabet(void);
+void print_alphabet_x10(void);
 /**
 * main - excutes code
 * Return: 0 means successful otherwise error
 */
 int main(void)
 {
-	print_alphabet();
+	print_alphabet_x10();
 	return 0;
 }
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int i;
 	
-	for (i = 97; i <= 122; i++)
+	for (i=0; i<10; i++)
 	{
-			char b = (char)i;
+		int a;
+		
+		for (a = 97;a <= 122; a++)
+		{
+			char b=(char)a;
 			
-			putchar(b);
-	}
+			putchar(a);
+		}
 		putchar('\n');
+	}
 }
-
