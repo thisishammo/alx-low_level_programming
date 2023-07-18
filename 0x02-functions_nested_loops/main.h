@@ -1,11 +1,7 @@
 #ifndef main_h
 #define main_h
-#include <unistd.h>
 
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char c);
 void print_alphabet(void)
 {
 	int i;
