@@ -1,26 +1,30 @@
 #include<unistd.h>
 /**
-* print_alphabet - prints alphabets
+* print_alphabet_x10 - prints alphabets x10
 * Return: void
 */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int i = 97;
+	int a = 10;
 
+	for (a = 10; a >= 1; a++)
+	{
 	for (i = 97; i <= 122; i++)
 	{
 		char letter = (char)i;
 
 		write(1, &letter, 1);
 	}
+	}
 }
 /**
-* main - executes the print_alphabet funtion
-* Return: 0 means successful
+* main - checks code
+* Return: 0 always
 */
 int main(void)
 {
-	print_alphabet();
+	print_alphabet_x10;
 	write(1, "\n", 1);
 	return (0);
 }
