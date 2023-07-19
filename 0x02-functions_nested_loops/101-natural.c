@@ -7,6 +7,7 @@
 int sum_mul(int n)
 {
 	int i, sum;
+
 	if (n < 1024)
 	{
 		for (i = 0; i <= n; i++)
@@ -16,7 +17,7 @@ int sum_mul(int n)
 				sum = sum + i;
 			}
 		}
-		printf("%d", sum-1);
+		printf("%d", sum - 1);
 	}
 	return (0);
 }
