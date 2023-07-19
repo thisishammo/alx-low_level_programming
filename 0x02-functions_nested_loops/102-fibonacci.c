@@ -1,12 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<inttypes.h>
 /**
 * fib - looks for fibonacci numbers
 * Return: 0 always
 */
 void fib(void)
 {
-	long int a[50];
+	int64_t a[50];
 	int i;
 
 	a[0] = 1;
@@ -16,10 +17,10 @@ void fib(void)
 		a[i] = a[i - 1] + a[i - 2];
 		if (i != 49)
 		{
-			printf("%ld, ", a[i]);
+			printf("%" PRId64 ", ", a[i]);
 		}
 		else
-		printf("%ld\n", a[i]);
+		printf("%" PRId64 "\n", a[i]);
 	}
 }
 /**
