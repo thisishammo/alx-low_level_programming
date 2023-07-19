@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 /**
-* main - executes code
+* sum_mul - adds numbers which are multiples of 3 and 5
+* @n: final value
 * Return: 0 always
 */
 int sum_mul(int n)
 {
 	int i, sum;
 
-	if (n < 1023)
+	if (n <= 1024)
 	{
 		for (i = 0; i < n + 1; i++)
 		{
@@ -21,6 +22,10 @@ int sum_mul(int n)
 	}
 	return (0);
 }
+/**
+* main - executes code
+* Return: 0 always
+*/
 int main(void)
 {
 	int ham;
