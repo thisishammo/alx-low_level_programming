@@ -16,7 +16,7 @@ void print_times_table(int n)
 				printf("%3d, ", i * h);
 			}
 			else
-			printf("%d", i * h);
+			printf("%3d", i * h);
 		}
 		printf("\n");
 	}
