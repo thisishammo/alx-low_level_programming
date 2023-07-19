@@ -6,6 +6,7 @@
 */
 void print_times_table(int n)
 {
+	
 	int i, h;
 	for (i = 0; i <= n; i++)
 	{
@@ -21,7 +22,12 @@ void print_times_table(int n)
 				printf("%4d,", i * h);
 			}
 			else
-			printf("%4d", i * h);
+			if(h != 0)
+			{
+				printf("%4d", i * h);
+			}
+			else;
+				printf("%d", i *h);
 		}
 		printf("\n");
 	}
