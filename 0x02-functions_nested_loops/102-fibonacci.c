@@ -6,7 +6,7 @@
 */
 void fib(void)
 {
-	long long int a[50];
+	long int a[50];
 	int i;
 
 	a[0] = 1;
@@ -16,10 +16,10 @@ void fib(void)
 		a[i] = a[i - 1] + a[i - 2];
 		if (i != 49)
 		{
-			printf("%lld, ", a[i]);
+			printf("%ld, ", a[i]);
 		}
 		else
-		printf("%lld\n", a[i]);
+		printf("%ld\n", a[i]);
 	}
 }
 /**
