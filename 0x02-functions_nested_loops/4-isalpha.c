@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code.
+ * _isalpha - check whether a character is alpha.
  *
  * Return: Always 0.
  */
