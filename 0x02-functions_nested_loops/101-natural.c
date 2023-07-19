@@ -1,26 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
 /**
-* fib - looks for fibonacci numbers
+* natural - looks natural numbers that are multiples of 5
 * Return: 0 always
 */
-void fib()
+int natural(void)
 {
-	int a[50];
 	int i;
-
-	a[0] = 1;
-	a[1] = 2;
-	for (i = 2; i <= 49; i++)
+	int sum = 0;
+	
+	for (i = 0; i < 1024; i++)
 	{
-		a[i] = a[i - 1] + a[i - 2];
-		if (i != 49)
+		if ((i % 3) == 0 || (i % 5) == 0)
 		{
-			printf("%d, ", a[i]);
+			sum = sum + i;
 		}
-		else
-		printf("%d\n", a[i]);
 	}
+	printf("%d", sum);
+	return (0);
 }
 /**
 * main - executes code
@@ -28,12 +25,6 @@ void fib()
 */
 int main(void)
 {
-	putchar('1');
-	putchar(',');
-	putchar(' ');
-	putchar('2');
-	putchar(',');
-	putchar(' ');
-	fib();
+	natural();
 	return (0);
 }
