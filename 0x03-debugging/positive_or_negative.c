@@ -1,10 +1,8 @@
-#include <stdlib.h>
-#include "main.h"
 #include<stdio.h>
 /**
- * * positive_or_negative - determines whether n is positive or negative or zero
- * * Return: 0 means successful otherwise means error
- */
+* positive_or_negative - determines whether n is +ve or negative or zero
+* @n: integer to be checked
+*/
 void positive_or_negative(int n)
 {
 	if (n > 0)
