@@ -9,7 +9,6 @@ void fib(void)
 {
 	int64_t a[98];
 	int i;
-	int64_t sum = 0;
 
 	a[0] = 1;
 	a[1] = 2;
