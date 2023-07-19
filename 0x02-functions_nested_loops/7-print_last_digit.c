@@ -1,5 +1,4 @@
 #include "main.h"
-#include<unistd.h>
 
 /**
  * main - check the code
@@ -13,10 +12,10 @@ int print_last_digit(int a)
 	{
 		last = a%10;
 		last = (last-(2*last));
-		write(1, &last, 1);
+		_putchar((char)last + '0');
 		return (last);
 	} else
 	last = a%10;
-	write(1, &last, 1);
+	_putchar((char)last + '0');
 	return (last);
 }
