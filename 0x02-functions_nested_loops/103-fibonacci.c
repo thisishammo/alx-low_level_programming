@@ -14,15 +14,15 @@ void fib(void)
 	a[0] = 1;
 	a[1] = 2;
 	for (i = 2; i <= 49; i++)
-    {
+	{
 		a[i] = a[i - 1] + a[i - 2];
 	}
 	for (i = 0; i < 50; i++)
-    {
-        if (a[i] % 2 == 0 && a[i] <= 4000000)
-		{
-			sum = sum + a[i];
-		}
+	{
+	if (a[i] % 2 == 0 && a[i] <= 4000000)
+	{
+		sum = sum + a[i];
+	}
 	}
 	printf("%" PRId64 "\n", sum);
 }
@@ -33,6 +33,6 @@ void fib(void)
 int main(void)
 {
 	fib();
-	return 0;
+	return (0);
 }
 
