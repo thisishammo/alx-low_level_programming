@@ -1,26 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
 /**
-* sum_mul - adds numbers which are multiples of 3 and 5
-* @n: final value
+* fib - looks for fibonacci numbers
 * Return: 0 always
 */
-int sum_mul(int n)
+void fib()
 {
-	int i, sum;
+	int a[50];
+	int i;
 
-	if (n < 1024)
+	a[0] = 1;
+	a[1] = 2;
+	for (i = 2; i <= 49; i++)
 	{
-		for (i = 0; i <= n; i++)
-		{
-			if ((i % 3) == 0 || (i % 5) == 0)
-			{
-				sum = sum + i;
-			}
-		}
-		printf("%d", sum - 1);
+		a[i] = a[i - 1] + a[i - 2];
+		printf("%d, ", a[i]);
 	}
-	return (0);
 }
 /**
 * main - executes code
@@ -28,9 +23,7 @@ int sum_mul(int n)
 */
 int main(void)
 {
-	int ham;
-
-	scanf("%d", &ham);
-	sum_mul(ham);
+	printf("1, 2, \n");
+	fib();
 	return (0);
 }
