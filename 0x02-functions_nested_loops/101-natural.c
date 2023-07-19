@@ -8,9 +8,9 @@ int sum_mul(int n)
 {
 	int i, sum;
 
-	if (n < 1024)
+	if (n < 1023)
 	{
-		for (i = 0; i <= n; i++)
+		for (i = 0; i < n + 1; i++)
 		{
 			if ((i % 3) == 0 || (i % 5) == 0)
 			{
