@@ -14,7 +14,12 @@ void fib()
 	for (i = 2; i <= 49; i++)
 	{
 		a[i] = a[i - 1] + a[i - 2];
-		printf("%d, ", a[i]);
+		if (i != 49)
+		{
+			printf("%d, ", a[i]);
+		}
+		else
+		printf("%d\n", a[i]);
 	}
 }
 /**
@@ -23,7 +28,12 @@ void fib()
 */
 int main(void)
 {
-	printf("1, 2, ");
+	putchar('1');
+	putchar(',');
+	putchar(' ');
+	putchar('2');
+	putchar(',');
+	putchar(' ');
 	fib();
 	return (0);
 }
