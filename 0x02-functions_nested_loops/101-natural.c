@@ -18,6 +18,7 @@ int sum_mul(int n)
 		}
 		printf("%d", sum-1);
 	}
+	return (0);
 }
 int main(void)
 {
