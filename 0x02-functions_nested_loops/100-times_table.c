@@ -8,10 +8,12 @@ void print_times_table(int n)
 {
 	
 	int i, h;
-	for (i = 0; i <= n; i++)
+	if (n < 100)
 	{
-		for (h = 0; h <= n; h++)
+		for (i = 0; i <= n; i++)
 		{
+			for (h = 0; h <= n; h++)
+			{
 			if(h != n)
 			{
 				if (h == 0)
@@ -28,7 +30,8 @@ void print_times_table(int n)
 			}
 			else
 				printf("%d", i *h);
-		}
+			}
 		printf("\n");
+		}
 	}
 }
