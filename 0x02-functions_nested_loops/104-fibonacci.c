@@ -7,24 +7,17 @@
  */
 void fib(void)
 {
-	int64_t a[50];
+	int64_t a[98];
 	int i;
 	int64_t sum = 0;
 
 	a[0] = 1;
 	a[1] = 2;
-	for (i = 2; i <= 49; i++)
+	for (i = 2; i <= 98; i++)
 	{
 		a[i] = a[i - 1] + a[i - 2];
+		printf("%" PRId64 ", ", a[i]);
 	}
-	for (i = 0; i < 50; i++)
-	{
-	if (a[i] % 2 == 0 && a[i] <= 4000000)
-	{
-		sum = sum + a[i];
-	}
-	}
-	printf("%" PRId64 "\n", sum);
 }
 /**
  * main - executes code
@@ -32,6 +25,7 @@ void fib(void)
  */
 int main(void)
 {
+	printf("1, 2, ");
 	fib();
 	return (0);
 }
