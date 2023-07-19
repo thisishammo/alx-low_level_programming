@@ -7,7 +7,7 @@
 void print_times_table(int n)
 {
 	int i, h;
-	for (i = 0; i <= n + 1; i++)
+	for (i = 0; i <= n; i++)
 	{
 		for (h = 0; h <= n; h++)
 		{
