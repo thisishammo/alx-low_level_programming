@@ -11,9 +11,9 @@ void print_times_table(int n)
 	{
 		for (h = 0; h <= n; h++)
 		{
-			if(h != (n*n))
+			if(h != n)
 			{
-				printf("%d, ", i * h);
+				printf("%d,  ", i * h);
 			}
 			else
 			printf("%d\n", i * h);
