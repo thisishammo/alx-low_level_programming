@@ -8,6 +8,7 @@ void fib(void)
 {
 	int a[50];
 	int i;
+	int sum = 0;
 
 	a[0] = 1;
 	a[1] = 2;
@@ -21,6 +22,14 @@ void fib(void)
 		else
 		printf("%d\n", a[i]);
 	}
+	for (i = 0; i < 50; i++)
+	{
+		if (((a[i]) % 2) == 0 && a[i] > 4000000)
+		{
+			sum = sum + a[i];
+		}
+	}
+	printf("%d\n", sum);
 }
 /**
 * main - executes code
