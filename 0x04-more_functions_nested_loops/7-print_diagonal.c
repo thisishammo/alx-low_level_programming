@@ -1,6 +1,6 @@
 #include"main.h"
 /**
-*  print_diagonal - draws a diagonal
+* print_diagonal - draws a diagonal
 * @n: dictates how long the diagonal should be
 * Return: void
 */
