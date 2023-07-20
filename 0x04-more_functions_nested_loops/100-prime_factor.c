@@ -10,7 +10,6 @@ int main(void)
 	int64_t i;
 	int64_t n = 612852475143;
 	int64_t large = 0;
-	int ih;
 
 	for (i = 2; i <= n; i++)
 	{
@@ -20,6 +19,6 @@ int main(void)
 		}
 	}
 	large = i - 1;
-	printf("%"PRId64, large);
+	printf("%"PRId64"\n", large);
 	return (0);
 }
