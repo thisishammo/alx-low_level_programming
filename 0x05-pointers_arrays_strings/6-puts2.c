@@ -4,7 +4,7 @@
 * @str: string to be printed
 * Return: nothing
 */
-void puts(char *str)
+void puts2(char *str)
 {
 	int h;
 
@@ -15,4 +15,5 @@ void puts(char *str)
 			_putchar(*(str + h));
 		}
 	}
+	_putchar('\n');
 }
