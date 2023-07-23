@@ -11,9 +11,9 @@ char *_strcpy(char *dest, char *src)
 
 	for (h = 0; h < 10000; h++)
 	{
-		if ((*(src + h)) != '\0')
+		if ((*(src + h)) == '\0')
 		{
-			continue;
+			break;
 		}
 		*(dest + h) = *(src + h);
 	}
