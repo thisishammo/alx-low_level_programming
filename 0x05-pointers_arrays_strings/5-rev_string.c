@@ -8,8 +8,9 @@
 */
 void rev_string(char *s)
 {
-	int h, k;
-	char string[1000];
+	int h, p;
+	char string[100];
+	int k = 0;
 
 	for (h = 0; h < 1000000; h++)
 	{
@@ -18,16 +19,16 @@ void rev_string(char *s)
 			break;
 		}
 	}
-	for (h = h; h > -1; h--)
+	for (h = h - 1; h > -1; h--)
 	{
-		for (k = 0; k <= h; k++)
-		{
-			string[k] = *(s + h);
-		}
+		string[k] = *(s + h);
+		k++;
 	}
-	for (h = k ; h > -1 ; h--)
+	for (p = 0; p < k; p++)
 	{
-		for (
-		*(s + h) = string[h];
+		if (string[p] != '\0')
+		{
+			*(s + p) = string[p];
+		}
 	}
 }
