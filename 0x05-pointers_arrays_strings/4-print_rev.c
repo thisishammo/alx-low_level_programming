@@ -17,8 +17,9 @@ void print_rev(char *s)
 			break;
 		}
 	}
-	for (h = h; h > -1; h--)
+	for (h = h - 1; h > -1; h--)
 	{
 		_putchar(*(s + h));
 	}
+	_putchar('\n');
 }
