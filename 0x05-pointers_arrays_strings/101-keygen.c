@@ -7,8 +7,10 @@
 */
 int main(void)
 {
+	long int random;
+
 	srand(time(NULL));
-	long random = rand();
+	random = rand();
 
 	printf("%ld", random);
 	return (0);
