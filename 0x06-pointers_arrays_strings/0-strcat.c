@@ -22,5 +22,7 @@ char *_strcat(char *dest, char *src)
 		i++;
 		src++;
 	}
+	h++;
+	*(dest + h) = '\0';
 	return (dest);
 }
