@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdlib.h>
 /**
 * cap_string - capitalizes all words of a string
 * @c: string to be modified
@@ -6,25 +7,77 @@
 */
 char *cap_string(char *c)
 {
-	int h;
+	char *buffer = (char*)malloc(1000);
+	int switcher = 0, i;
 
-	for (h = 0; *(c + h) != '\0'; h++)
+	for (i = 0; *(c + i) != '\0'; i++)
 	{
-		if (h == 0)
+		switch (*(c + i))
 		{
-			if ((int)*(c + h) >= 97 && (int)*(c + h) <= 122)
-			{
-				*(c + h) = (char)(((int)*(c + h)) - 32);
-			}
+			case '\n':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case '\t':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case ' ':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case ',':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case '.':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case ';':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case '!':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case '?':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case '\"':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case '(':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case ')':
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case ((char)(121)):
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+			case ((char)(123)):
+			buffer[i] = *(c + i);
+			switcher = 1;
+			break;
+
+
 		}
-		else
-			if (*(c + h) == '\t' || *(c + h) == ' ' || *(c + h) == '\n' || *(c + h) == ',' || *(c + h) == ';' || *(c + h) == '.' || *(c + h) == '!' || *(c + h) == '?' || *(c + h) == '\"' || *(c + h) == '(' || *(c + h) == ')' || *(c + h) == '{' || *(c + h) == '}')
-			{
-				if ((int)*(c + h) >= 97 && (int)*(c + h) <= 122)
-				{
-					*(c + h) = (char)(((int)*(c + h)) - 32);
-				}	
-			}
+		if (switcher == 1)
+		{
+			buffer[i] = (char)((int)*(c + i) - 32);
+			switcher = 0;
+		}
+	}
+	for (i = 0; buffer[i] != '\0'; i++)
+	{
+		*(c + i) = buffer[i];
 	}
 	return (c);
 }
