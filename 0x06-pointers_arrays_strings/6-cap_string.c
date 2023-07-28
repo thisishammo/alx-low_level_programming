@@ -1,83 +1,39 @@
-#include"main.h"
-#include<stdlib.h>
+#include "main.h"
+
 /**
-* cap_string - capitalizes all words of a string
-* @c: string to be modified
-* return: pointer to c
-*/
-char *cap_string(char *c)
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
+ */
+char *cap_string(char *str)
 {
-	char *buffer = (char*)malloc(1000);
-	int switcher = 0, i;
+	int index = 0;
 
-	for (i = 0; *(c + i) != '\0'; i++)
+	while (str[index])
 	{
-		switch (*(c + i))
-		{
-			case '\n':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case '\t':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case ' ':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case ',':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case '.':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case ';':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case '!':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case '?':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case '\"':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case '(':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case ')':
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case ((char)(121)):
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
-			case ((char)(123)):
-			buffer[i] = *(c + i);
-			switcher = 1;
-			break;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
 
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
 
-		}
-		if (switcher == 1)
-		{
-			buffer[i] = (char)((int)*(c + i) - 32);
-			switcher = 0;
-		}
+		index++;
 	}
-	for (i = 0; buffer[i] != '\0'; i++)
-	{
-		*(c + i) = buffer[i];
-	}
-	return (c);
+
+	return (str);
 }
+
