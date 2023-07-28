@@ -6,60 +6,17 @@
 */
 char *leet(char *c)
 {
-	int i;
+	int i, h;
+	char s[] = "aAeEoOtTlL";
+	char s1[] = "4433007711";
 
-	for (i = 0; *(c + i) != '\0'; i++)
+	for (h = 0; c[h] != '\0'; h++)
 	{
-		if (*(c + i) == 'a' || *(c + i) == 'A')
+		for (i = 0; i < 10; i++)
+		if (*(c + h) == s[i])
 		{
-			if (*(c + i) == 'A')
-			{
-				*(c + i) = (char)((int)(*(c + i)) - 13);
-			}
-			else
-			 *(c + i) = (char)(((int)(*(c + i))) - 45);
+			*(c + h) = s1[i];
 		}
-		else
-		if (*(c + i) == 'e' || *(c + i) == 'E')
-		{
-			if (*(c + i) == 'E')
-			{
-				*(c + i) = (char)((int)(*(c + i)) - 18);
-			}
-			else
-			 *(c + i) = (char)(((int)(*(c + i))) - 50);
-		}
-		else
-		if (*(c + i) == 'o' || *(c + i) == 'O')
-		{
-			if (*(c + i) == 'O')
-			{
-				*(c + i) =  (char)((int)(*(c + i)) - 26);
-			}
-			else
-			 *(c + i) = (char)(((int)(*(c + i))) - 63);
-		}
-		else
-		if (*(c + i) == 't' || *(c + i) == 'T')
-		{
-			if (*(c + i) == 'T')
-			{
-				*(c + i) =  (char)((int)(*(c + i)) - 29);
-			}
-			else
-			 *(c + i) = (char)(((int)(*(c + i))) - 61);
-		}
-		else
-		if (*(c + i) == 'l' || *(c + i) == 'L')
-		{
-			if (*(c + i) == 'L')
-			{
-				*(c + i) =  (char)((int)(*(c + i)) - 27);
-			}
-			else
-			 *(c + i) = (char)(((int)(*(c + i))) - 59);
-		}
-
 	}
 	return (c);
 }
