@@ -29,5 +29,9 @@ char *_strchr(char *s, char c)
 		}
 	}
 	found[h] = '\0';
-	return (found);
+	if (found != NULL)
+	{
+		return (found);
+	}
+		return (NULL);
 }
