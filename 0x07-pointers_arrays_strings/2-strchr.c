@@ -8,7 +8,7 @@
 */
 char *_strchr(char *s, char c)
 {
-	char *found = (char*)malloc(1000);
+	char *found = (char *)malloc(100);
 	int swit = 0, i = 0, k, h = 0;
 
 	for (i = 0; *(s + i) != '\0'; i++)
@@ -24,9 +24,10 @@ char *_strchr(char *s, char c)
 	{
 		for (k = k; *(s + k) != '\0'; k++)
 		{
-			*(s + k) = *(found + h);
+			found[h] = *(s + k);
 			h++;
 		}
 	}
+	found[h] = '\0';
 	return (found);
 }
