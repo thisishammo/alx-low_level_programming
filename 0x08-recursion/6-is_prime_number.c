@@ -11,7 +11,7 @@ int search(int m, int p)
 	{
 		if ((m % p) != 0)
 		{
-			search(m, p + 1);
+			return search(m, p + 1);
 		}
 		else
 			return (0);
