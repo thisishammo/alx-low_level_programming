@@ -19,7 +19,7 @@ int find(int m, int k)
 			return (-1);
 		}
 		else
-			return find(m, k + 1);
+			return (find(m, k + 1));
 }
 /**
 * _sqrt_recursion - finds square root
