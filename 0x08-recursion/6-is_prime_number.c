@@ -5,23 +5,30 @@
 * @n: number to be determined
 * Return: integer
 */
-int search(int a, int b)
+int search(int m, int p)
 {
-	if (a > 1)
+	if (p != m)
 	{
-		if (a % b == 0)
+		if ((m % p) != 0)
 		{
-			return (0);
+			search(m, p + 1);
 		}
 		else
-			search(a, b + 1);
+			return (0);
 	}
 	else
-		return (0);
+	{
+		return (1);
+	}
 }
 int is_prime_number(int n)
 {
-	int i = search(n, 1);
-
-	return (i);
+	if (!(n > 1))
+	{
+		return (0);
+	}
+	else
+	{
+		return (search(n, 2));
+	}
 }
