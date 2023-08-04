@@ -5,9 +5,8 @@
  * @argv: the actual arguments entered
  * Return: 0 if successful
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	argc -= 1;
-	printf("%s\n", argv[argc]);
+	printf("%d\n", argc - 1);
 	return (0);
 }
