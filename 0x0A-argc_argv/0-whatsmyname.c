@@ -7,6 +7,8 @@
  */
 int main(int argc __attribute__ ((unused)), char *argv[])
 {
-	printf("%s\n", *argv);
+	char *test = "b";
+	char *test2 = "100";
+	printf("%d", (int)test2);
 	return (0);
 }
