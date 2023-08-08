@@ -6,49 +6,95 @@
  * @s2: Second string
  * Return: pointer to concatenated string
  */
-int counter(char **string1, char **string2)
-{
-	int count = 0, p;
-	for (p = 0; string1[p] != '\0'; p++)
-	{
-		count++;
-	}
-	for (p = 0; string2[p] != '\0'; p++)
-	{
-		count++;
-	}
-	return (count);
-}
 char *str_concat(char *s1, char *s2)
 {
-	int i, count = counter(*s1, *s2);
-	char *dup = (char *)malloc(1 * sizeof(char));
+	char *cat;
 
-	for (i = 0; i < count; i++)
+	if (s1 != NULL && s2 != NULL)
 	{
-		if (s1 != NULL && s2 != NULL)
+		int count = 0, count1 = 0, h = 0;
+		int i;
+
+		for (i = 0; *(s1 + i) != '\0'; i++)
 		{
-			if (*(s1 + i) != '\0')
-				{
-					*(dup + i) = *(s1 + i);
-					dup = (char *)realloc(dup, (i + 2) * sizeof(char));
-				}
-				else
-					if (*(s2 + i) != '\0')
-					{
-						*(dup + i) = *(s2 + i);
-						dup = (char *)realloc(dup, (i + 2) * sizeof(char));
-					}
-					else
-						break;
+			count++;
+		}
+		for (i = 0; *(s2 + i) != '\0'; i++)
+		{
+			count1++;
+		}
+		cat = (char *)malloc((count + count1) * sizeof(char));
+		for (i = 0; i < (count + count1); i++)
+		{
+			if (i <= count - 1)
+			{
+				cat[i] = s1[i];
+			}
+			else
+			{
+				cat[i] = s2[h];
+				h++;
+			}
+		}
+		cat[i] = '\0';
+		if (cat == NULL)
+		{
+			return (NULL);
+		}
+		else
+		{
+			return (cat);
 		}
 	}
-	i++;
-	dup = (char *)realloc(dup, i * sizeof(char));
-	*(dup + i) = '\0';
-	if (dup != NULL)
+	else
 	{
-		return (dup);
-	}	
+		if (s1 == NULL)
+		{
+			int count1 = 0, i = 0;
+			for (i = 0; *(s2 + i) != '\0'; i++)
+			{
+				count1++;
+			}
+			cat = (char *)malloc(count1 * sizeof(char));
+			for (i = 0; i < count1; i++)
+			{
+				cat[i] = s2[i];
+			}
+			cat[i] = '\0';
+			if (cat == NULL)
+			{
+				return (NULL);
+			}
+			else
+			{
+				return (cat);
+			}
+		}
+		else
+		{
+			if (s2 == NULL)
+			{
+				int count1 = 0, i = 0;
+				for (i = 0; *(s1 + i) != '\0'; i++)
+				{
+					count1++;
+				}
+				cat = (char *)malloc(count1 * sizeof(char));
+				for (i = 0; i < count1; i++)
+				{
+					cat[i] = s1[i];
+				}
+				cat[i] = '\0';
+				if (cat == NULL)
+				{
+					return (NULL);
+				}
+				else
+				{
+					return (cat);
+				}
+			}
+		}
+	}
 	return (NULL);
 }
