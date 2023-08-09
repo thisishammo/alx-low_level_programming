@@ -8,6 +8,8 @@
  */
 void free_grid(int **grid, int height __attribute__((unused)))
 {
+	int i;
+
 	for (i = 0; i < height; i++}
 	{
 		grid[i] = (int *)realloc(grid[i], 0);
