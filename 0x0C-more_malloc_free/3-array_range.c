@@ -8,11 +8,25 @@
  */
 int *array_range(int min, int max)
 {
-	int *arr = (int *)malloc((max - min + 1) * sizeof(int)), i;
-
-	for (i = min; i < max; i++)
+	if (min > max)
 	{
-		arr[i] = i;
+		return (NULL);
 	}
-	return (arr);
+	else
+	{
+		int *arr = (int *)malloc((max - min + 1) * sizeof(int)), i;
+
+		if (arr == NULL)
+		{
+			return (NULL);
+		}
+		else
+		{
+			for (i = min; i < max; i++)
+			{
+				arr[i] = i;
+			}
+			return (arr);
+		}
+	}
 }
