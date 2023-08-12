@@ -1,7 +1,10 @@
 #include"main.h"
 #include<stdlib.h>
 /**
- * 
+ * _calloc - malloc initialises the value of 0
+ * @nmemb: Number of elements
+ * @size: size of variables
+ * Return: pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -22,10 +25,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		else
 		{
 			char *s = p;
+
 			for (i = 0; i < nmemb; i++)
 			{
 				s[i] = 0;
-			}	
+			}
 			return (p);
 		}
 	}
