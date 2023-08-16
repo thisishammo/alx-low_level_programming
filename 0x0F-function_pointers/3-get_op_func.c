@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int a, int b)
 	{NULL, NULL}
 	};
 
-	while (!(i > 4) || s != ops[i].op)
+	while (!(i > 4))
 	{
 		if (strcmp(s, ops[i].op) == 0)
 		{
@@ -29,5 +29,6 @@ int (*get_op_func(char *s))(int a, int b)
 		}
 		i++;
 	}
+	printf("Error\n");
 	return (NULL);
 }
