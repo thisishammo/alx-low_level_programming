@@ -2,7 +2,7 @@
 #include<sys/types.h>
 #include<fcntl.h>
 #include<unistd.h>
-#include<stdio.h>
+#include<stdlib.h>
 /**
  * read_textfile - reads the contents of a file
  * @filename: Name of file
@@ -11,12 +11,12 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buffer[1024];
+	char *buffer = (char *)malloc(1024 * sizeof(char));
 	int file_descriptor = open(filename, O_RDONLY);
 
-	if (file_descriptor < 0 | filename == NULL)
+	if ((file_descriptor < 0) | (filename == NULL))
 	{
-		perror("open");
+		write(2, "open", 4);
 		return (-1);
 	}
 	else
@@ -25,9 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 		if (bytes < 0)
 		{
-			perror("read");
+			write(2, "read", 4);
 			return (-1);
 		}
+		write(STDOUT_FILENO, buffer, 1024);
 		close(file_descriptor);
 		return (bytes);
 	}

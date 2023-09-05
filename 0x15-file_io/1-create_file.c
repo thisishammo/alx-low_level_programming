@@ -1,5 +1,4 @@
 #include"main.h"
-#include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>
 #include<sys/stat.h>
@@ -16,7 +15,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (fd == -1 | filename == NULL)
 	{
-		perror("open");
+		write(2, "open", 4);
 		umask(old_mask);
 		return (-1);
 	}
@@ -25,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 		dprintf(fd, "%s", text_content);
 		if (chmod(filename, 0600) == -1)
 		{
-			perror("chmod");
+			write(2, "chmod", 5);
 			umask(old_mask);
 			return (-1);
 		}

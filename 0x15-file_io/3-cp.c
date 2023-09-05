@@ -1,6 +1,5 @@
 #include<fcntl.h>
 #include<unistd.h>
-#include<stdio.h>
 #include<stdlib.h>
 #include<sys/stat.h>
 /**
@@ -16,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		perror("Usage: cp file_from file_to\n");
+		write(2, "Usage: cp file_from file_to\n", 1024);
 		exit(97);
 	}
 	else
@@ -24,7 +23,7 @@ int main(int argc, char *argv[])
 		fd = open(argv[1], O_RDONLY);
 		if (fd < 0)
 		{
-			perror("Error: Can't read from file");
+			write(2, "Error: Can't read from file", 1024);
 			write(2, argv[2], 1024);
 			exit(98);
 		}
