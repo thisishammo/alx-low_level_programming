@@ -1,1 +1,0 @@
-Pointers, pointers, pointers!

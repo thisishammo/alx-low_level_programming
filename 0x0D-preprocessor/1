@@ -1,8 +1,0 @@
-
-========== 4-sum.h ==========
-4-sum.h:2: WARNING: This line is not protected from double inclusion
-total: 0 errors, 1 warnings, 3 lines checked
-
-========== 2 ==========
-diff: 2: No such file or directory
-Error: Cannot open file 2

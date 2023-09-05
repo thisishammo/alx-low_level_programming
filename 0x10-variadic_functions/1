@@ -1,5 +1,0 @@
-In file included from 3-print_all.c:2:
-3-print_all.c: In function ‘print_all’:
-3-print_all.c:51:55: error: expected specifier-qualifier-list before ‘sizeof’
-   51 |                         f[while_counter](va_arg(args, sizeof(char *)));
-      |                                                       ^~~~~~
